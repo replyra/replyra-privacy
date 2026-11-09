@@ -34,17 +34,18 @@
     <p>Replyra helps Amazon sellers write customer replies and listing bullets, and flags risky phrases before they send. This page explains what data Replyra handles.</p>
 
     <h2>Data stays on your device</h2>
-    <p>Your settings, daily usage count, override log, cached model list, and Groq API key are stored locally on your device in <code>chrome.storage.local</code>. Replyra has no server of its own and cannot see or access this data.</p>
+    <p>Your settings, daily usage count, override log, cached model list, Groq API key, and Pro license key are stored locally on your device in <code>chrome.storage.local</code>. The developer does not have access to this data.</p>
 
     <h2>Where requests go</h2>
     <ul>
-      <li>Generation requests (the customer message, your context, or your bullet text, plus formatting instructions) are sent directly from your browser to <code>api.groq.com</code> only when you click Generate, using your own Groq API key.</li>
-      <li>Your Groq API key is stored on your device only and is sent only to <code>api.groq.com</code>.</li>
+      <li><strong>Generation:</strong> the customer message, your context, order details, brand voice, or listing text, plus formatting instructions, are sent directly from your browser to <code>api.groq.com</code> only when you click Generate, using your own Groq API key.</li>
+      <li><strong>Groq API key:</strong> stored on your device only and sent only to <code>api.groq.com</code>.</li>
+      <li><strong>Pro license check:</strong> when you activate a Pro license key, Replyra sends that key and a device identifier stored by the extension to Replyra's license service (<code>replyra-license.sinomoselhy175.workers.dev</code>). The service checks the key with Whop, our payment provider, and links the key to one device. The key and device identifier are used only for this check. Your Groq key and your message text are never sent to the license service.</li>
     </ul>
-    <p>Groq processes requests under its own privacy policy.</p>
+    <p>Groq processes generation requests under its own privacy policy. Whop processes purchases under its own privacy policy.</p>
 
     <h2>No analytics or telemetry</h2>
-    <p>Replyra does not use analytics, tracking, advertising, or telemetry, does not collect personal data, and does not load remote code.</p>
+    <p>Replyra does not use analytics, tracking, advertising, or telemetry, and does not load remote code.</p>
 
     <h2>Policy Guard</h2>
     <p>Policy Guard runs entirely on your device. Its text checks are not sent anywhere. If you override a warning, the time and rule names are saved locally on your device in the override log.</p>
