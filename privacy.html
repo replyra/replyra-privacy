@@ -1,63 +1,14 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Replyra Privacy Policy</title>
-  <style>
-    :root { color-scheme: light dark; }
-    body {
-      margin: 0; padding: 40px 20px 64px;
-      font: 14px/1.6 system-ui, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif;
-      background: #f5f5f7; color: #1d1d1f;
-    }
-    main { max-width: 640px; margin: 0 auto; }
-    h1 { font-size: 22px; font-weight: 600; letter-spacing: -0.01em; margin: 0 0 4px; }
-    h2 { font-size: 16px; font-weight: 600; letter-spacing: -0.01em; margin: 28px 0 6px; }
-    p, li { margin: 0 0 8px; }
-    ul { padding-left: 20px; margin: 0; }
-    .meta { color: #6e6e73; }
-    a { color: #0062cc; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    code { font-size: 13px; }
-    @media (prefers-color-scheme: dark) {
-      body { background: #1c1c1e; color: #f5f5f7; }
-      .meta { color: #a1a1a6; }
-      a { color: #4da3ff; }
-    }
-  </style>
-</head>
-<body>
-  <main>
-    <h1>Replyra Privacy Policy</h1>
-    <p class="meta">Version 2.0.1</p>
-    <p>Replyra helps Amazon sellers write customer replies and listing bullets, and flags risky phrases before they send. This page explains what data Replyra handles.</p>
-
-    <h2>Data stays on your device</h2>
-    <p>Your settings, daily usage count, override log, cached model list, Groq API key, and Pro license key are stored locally on your device in <code>chrome.storage.local</code>. The developer does not have access to this data.</p>
-
-    <h2>Where requests go</h2>
-    <ul>
-      <li><strong>Generation:</strong> the customer message, your context, order details, brand voice, or listing text, plus formatting instructions, are sent directly from your browser to <code>api.groq.com</code> only when you click Generate, using your own Groq API key.</li>
-      <li><strong>Groq API key:</strong> stored on your device only and sent only to <code>api.groq.com</code>.</li>
-      <li><strong>Pro license check:</strong> when you activate a Pro license key, Replyra sends that key and a device identifier stored by the extension to Replyra's license service (<code>replyra-license.sinomoselhy175.workers.dev</code>). The service checks the key with Whop, our payment provider, and links the key to one device. The key and device identifier are used only for this check. Your Groq key and your message text are never sent to the license service.</li>
-    </ul>
-    <p>Groq processes generation requests under its own privacy policy. Whop processes purchases under its own privacy policy.</p>
-
-    <h2>No analytics or telemetry</h2>
-    <p>Replyra does not use analytics, tracking, advertising, or telemetry, and does not load remote code.</p>
-
-    <h2>Policy Guard</h2>
-    <p>Policy Guard runs entirely on your device. Its text checks are not sent anywhere. If you override a warning, the time and rule names are saved locally on your device in the override log.</p>
-
-    <h2>Deleting your data</h2>
-    <p>Open Replyra Options and choose <strong>Delete all data</strong>, or remove the extension from Chrome. Either way, everything Replyra stored on your device is erased.</p>
-
-    <h2>Not affiliated with Amazon</h2>
-    <p>Replyra is an independent tool. It is not affiliated with or endorsed by Amazon. You are responsible for every message you send.</p>
-
-    <h2>Contact</h2>
-    <p><a href="mailto:replyra.support@gmail.com">replyra.support@gmail.com</a></p>
-  </main>
-</body>
-</html>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Replyra Privacy Policy — Draft</title><style>body{background:#111318;color:#f5f5f2;font-family:system-ui,-apple-system,Segoe UI,sans-serif;font-size:16px;line-height:1.72;max-width:850px;margin:40px auto;padding:0 24px}h1{font-size:2.1rem}h2{font-size:1.2rem;margin-top:2.2rem;color:#c1bff9}p{color:#d5d5dc}a{color:#aaa9ff}strong{color:#fff}</style></head><body><h1>Replyra Privacy Policy — Draft for Review</h1>
+<p><strong>Last updated:</strong> November 11, 2026. This is a draft. Confirm all practices, service providers and retention periods before publishing.</p>
+<h2>1. What Replyra does</h2><p>Replyra is a Chrome extension that helps you draft customer messages and rewrite product listing text. You choose what to enter, generate and copy. Replyra does not send messages to customers automatically.</p>
+<h2>2. Data stored on your device</h2><p>Extension settings, selected AI model, brand voice profiles, saved drafts, local usage counters and a pseudonymous extension/device identifier may be stored in Chrome extension local storage. Saved drafts are enabled by default and can contain generated text; you can disable local saving or delete drafts. The Groq API key you enter is stored locally for later requests. License state is also stored locally.</p>
+<h2>3. AI requests to Groq</h2><p>In the currently supported direct BYOK mode, the extension sends your Groq API key and information you submit for generation directly to Groq over HTTPS. This may include customer message text, order context, product listing text and brand voice instructions. Groq processes those requests according to its own service terms and privacy practices. Avoid submitting unnecessary personal information about customers.</p>
+<h2>4. Subscription verification</h2><p>When you activate or revalidate a paid license, the extension sends the membership/license key and pseudonymous device identifier to Replyra's Cloudflare Worker. The Worker contacts Whop to check membership status and product eligibility; Cloudflare D1 may store an association between an active membership and the identifier. This is not a physical hardware identifier and is not cryptographic device attestation.</p>
+<h2>5. How data is used</h2><p>Data is used to provide writing features, retain user-selected settings and drafts, verify paid access, troubleshoot technical problems and protect service operation. No sale of user data is intended. Confirm logs, telemetry and Cloudflare retention settings before finalizing this statement.</p>
+<h2>6. Control and deletion</h2><p>You can stop saving drafts, delete saved drafts, export applicable local content without API keys or license secrets, and delete locally stored data using the Options screen. Full device-identity deletion may prevent reactivation on an already bound paid license; contact support before doing so. Deleting local data does not automatically remove data already processed by Groq, Whop or Cloudflare.</p>
+<h2>7. Automated suggestions and marketplace policies</h2><p>AI outputs and Policy Guard warnings are suggestions, not guarantees of factual correctness, legal compliance or Amazon-policy compliance. You are responsible for reviewing every response and listing before use. Replyra is not affiliated with Amazon.</p>
+<h2>8. Security</h2><p>Data transmitted to the APIs listed above is sent using HTTPS. API keys remain accessible to the signed-in user's extension environment and cannot be hidden from the device owner. No browser extension can guarantee absolute protection against a compromised device or a modified local copy.</p>
+<h2>9. Third parties</h2><p>Depending on usage, Groq processes AI requests, Whop processes membership status, and Cloudflare hosts licensing services and database records. Review their current terms for details about retention, subprocessors and international data handling.</p>
+<h2>10. Changes</h2><p>If an optional BYOK generation gateway is introduced in the future, it would route a user's Groq key and text through Cloudflare before Groq. This is not enabled by the current publicly deployed direct mode and will require an updated notice and explicit consent prior to activation.</p>
+<h2>11. Contact</h2><p>Questions: <a href="mailto:replyra.support@gmail.com">replyra.support@gmail.com</a>.</p>
+</body></html>
